@@ -25,7 +25,7 @@ export default function Header() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
           <a href="#top" aria-label="Klientia — inicio">
-            <Logo />
+            <Logo className="h-10 sm:h-11" />
           </a>
 
           <div className="hidden items-center gap-7 lg:flex">

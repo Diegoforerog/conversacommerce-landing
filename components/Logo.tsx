@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Logo({ className = '' }: { className?: string }) {
+export default function Logo({ className = 'h-9' }: { className?: string }) {
   return (
     <Image
       src="/brand/klientia-lockup.png"
@@ -8,7 +8,7 @@ export default function Logo({ className = '' }: { className?: string }) {
       width={520}
       height={213}
       priority
-      className={`h-8 w-auto ${className}`}
+      className={`w-auto ${className}`}
     />
   );
 }

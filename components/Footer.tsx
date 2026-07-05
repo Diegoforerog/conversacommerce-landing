@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="max-w-xs">
-            <Logo />
+            <Logo className="h-10" />
             <p className="mt-4 text-[14.5px] leading-relaxed text-ink-mute">
               El vendedor con IA para tu WhatsApp. Atiende, vende, cobra y recupera carritos por ti. Hecho para LATAM.
             </p>
