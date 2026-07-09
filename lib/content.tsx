@@ -23,7 +23,7 @@ export const registerWithPlan = (plan: 'BRONCE' | 'PLATA' | 'ORO') =>
 export const NAV_LINKS = [
   { label: 'Características', href: '#caracteristicas' },
   { label: 'Cómo funciona', href: '#como-funciona' },
-  { label: 'Planes', href: '#precios' },
+  { label: 'Precios', href: '#precios' },
   { label: 'Preguntas', href: '#faq' },
 ];
 

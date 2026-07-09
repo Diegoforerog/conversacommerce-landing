@@ -35,6 +35,8 @@ export default function StructuredData() {
         offers: PLANS.map((p) => ({
           '@type': 'Offer',
           name: `Plan ${p.name}`,
+          price: p.price.replace(/\./g, ''),
+          priceCurrency: 'COP',
           url: `${REGISTER_URL}?plan=${p.id}`,
           category: 'subscription',
         })),
