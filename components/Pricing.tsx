@@ -14,7 +14,7 @@ export default function Pricing() {
               Elige tu plan y <span className="text-brand-600">empieza gratis 7 días</span>
             </>
           }
-          subtitle="Empiezas gratis 7 días, sin tarjeta. El precio de tu plan solo se cobra al terminar la prueba. Cancela cuando quieras · precios en pesos colombianos (COP)."
+          subtitle="Empiezas gratis 7 días, sin tarjeta. El precio de tu plan solo se cobra al terminar la prueba. Cancela cuando quieras · precios en dólares (USD)."
         />
 
         <div className="mx-auto mt-14 grid max-w-5xl items-start gap-6 lg:grid-cols-3">
@@ -44,12 +44,18 @@ export default function Pricing() {
                   <div className="mt-6 flex items-end gap-1">
                     <span className={`text-[15px] font-semibold ${pop ? 'text-white/60' : 'text-ink-faint'}`}>$</span>
                     <span className={`text-[2.75rem] font-bold leading-none tracking-tight ${pop ? 'text-white' : 'text-ink'}`}>
-                      {plan.price}
+                      {plan.priceMonthly}
                     </span>
-                    <span className={`mb-1 text-[14px] ${pop ? 'text-white/60' : 'text-ink-mute'}`}>/mes</span>
+                    <span className={`mb-1 text-[14px] ${pop ? 'text-white/60' : 'text-ink-mute'}`}>USD/mes</span>
                   </div>
-                  <p className={`mt-2 text-[13px] leading-snug ${pop ? 'text-white/55' : 'text-ink-faint'}`}>
-                    Después de tu prueba gratis de 7 días · cancela antes y no pagas
+                  <p className={`mt-2 text-[13px] leading-snug ${pop ? 'text-white/70' : 'text-ink-soft'}`}>
+                    o <span className="font-semibold">${plan.priceYearly}/año</span>
+                    <span className={`ml-1.5 rounded-full px-2 py-0.5 text-[11.5px] font-semibold ${pop ? 'bg-white/15 text-white' : 'bg-emerald-50 text-emerald-700'}`}>
+                      2 meses gratis
+                    </span>
+                  </p>
+                  <p className={`mt-1.5 text-[12.5px] leading-snug ${pop ? 'text-white/55' : 'text-ink-faint'}`}>
+                    Se cobra al terminar tu prueba de 7 días · cancela antes y no pagas
                   </p>
 
                   <a

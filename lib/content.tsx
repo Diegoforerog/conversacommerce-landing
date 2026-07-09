@@ -141,7 +141,9 @@ export const STEPS = [
 export type Plan = {
   id: 'BRONCE' | 'PLATA' | 'ORO';
   name: string;
-  price: string;
+  /** Precios en USD (misma fuente que el panel/Paddle). El anual = 10 meses (2 gratis). */
+  priceMonthly: string;
+  priceYearly: string;
   tagline: string;
   popular?: boolean;
   features: string[];
@@ -152,7 +154,8 @@ export const PLANS: Plan[] = [
   {
     id: 'BRONCE',
     name: 'Responde',
-    price: '49.900',
+    priceMonthly: '9.99',
+    priceYearly: '99.90',
     tagline: 'El bot que atiende y responde por ti, 24/7.',
     features: [
       'Agente de IA que responde con tu información, 24/7',
@@ -166,7 +169,8 @@ export const PLANS: Plan[] = [
   {
     id: 'PLATA',
     name: 'Agenda',
-    price: '89.900',
+    priceMonthly: '19.99',
+    priceYearly: '199.90',
     tagline: 'Suma citas: el bot que agenda por ti.',
     features: [
       'Todo lo de Responde',
@@ -180,7 +184,8 @@ export const PLANS: Plan[] = [
   {
     id: 'ORO',
     name: 'Vende',
-    price: '149.900',
+    priceMonthly: '39.99',
+    priceYearly: '399.90',
     tagline: 'El completo: el bot que vende, cobra y recupera.',
     popular: true,
     features: [
