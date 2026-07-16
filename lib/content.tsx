@@ -141,21 +141,30 @@ export const STEPS = [
 export type Plan = {
   id: 'BRONCE' | 'PLATA' | 'ORO';
   name: string;
-  /** Precios en USD (misma fuente que el panel/Paddle). El anual = 10 meses (2 gratis). */
-  priceMonthly: string;
+  /** Precios en USD. launch = precio de lanzamiento (actual); list = precio normal (tachado);
+   *  yearly = pago anual con 2 meses gratis (sobre precio de lista). */
+  priceLaunch: string;
+  priceList: string;
   priceYearly: string;
+  /** Conversaciones/mes incluidas en el plan. */
+  conversations: string;
   tagline: string;
   popular?: boolean;
   features: string[];
   cta: string;
 };
 
+/** Costo por conversación adicional al superar el cupo del plan (USD). */
+export const EXTRA_CONVERSATION_USD = '0.09';
+
 export const PLANS: Plan[] = [
   {
     id: 'BRONCE',
     name: 'Responde',
-    priceMonthly: '9.99',
-    priceYearly: '99.90',
+    priceLaunch: '19',
+    priceList: '29',
+    priceYearly: '290',
+    conversations: '1.000',
     tagline: 'El bot que atiende y responde por ti, 24/7.',
     features: [
       'Agente de IA que responde con tu información, 24/7',
@@ -169,8 +178,10 @@ export const PLANS: Plan[] = [
   {
     id: 'PLATA',
     name: 'Agenda',
-    priceMonthly: '19.99',
-    priceYearly: '199.90',
+    priceLaunch: '29',
+    priceList: '49',
+    priceYearly: '490',
+    conversations: '2.000',
     tagline: 'Suma citas: el bot que agenda por ti.',
     features: [
       'Todo lo de Responde',
@@ -184,8 +195,10 @@ export const PLANS: Plan[] = [
   {
     id: 'ORO',
     name: 'Vende',
-    priceMonthly: '39.99',
-    priceYearly: '399.90',
+    priceLaunch: '49',
+    priceList: '89',
+    priceYearly: '890',
+    conversations: '3.000',
     tagline: 'El completo: el bot que vende, cobra y recupera.',
     popular: true,
     features: [
