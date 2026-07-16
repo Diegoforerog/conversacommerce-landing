@@ -1,0 +1,29 @@
+:root {
+  --md-primary-fg-color:        #5b50e6;
+  --md-primary-fg-color--light: #7a71ee;
+  --md-primary-fg-color--dark:  #4a40cf;
+  --md-accent-fg-color:         #4a40cf;
+  --md-typeset-a-color:         #4a40cf;
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #7a71ee;
+  --md-accent-fg-color:  #9a92f5;
+  --md-typeset-a-color:  #a79ff7;
+}
+
+/* marco tipo captura de pantalla */
+.md-typeset img {
+  border-radius: 10px;
+}
+.md-typeset figure img,
+.md-typeset p > img {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 12px 34px -14px rgba(25, 26, 36, .28);
+}
+
+/* logo más grande en la barra */
+.md-header__button.md-logo img { height: 1.5rem; }
+
+/* títulos un poco más marcados */
+.md-typeset h1 { font-weight: 800; letter-spacing: -.02em; }
+.md-typeset h2 { font-weight: 700; letter-spacing: -.01em; margin-top: 2.2em; }
