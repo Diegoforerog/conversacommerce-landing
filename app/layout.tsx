@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Nunito_Sans, Rubik } from 'next/font/google';
 import './globals.css';
+import { SiteTracking } from '@/components/SiteTracking';
+import { CookieConsent } from '@/components/CookieConsent';
 
 const sans = Nunito_Sans({
   subsets: ['latin'],
@@ -70,7 +72,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${sans.variable} ${heading.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Pixel propio de Klientia (medir nuestra pauta) + consentimiento de cookies. */}
+        <SiteTracking />
+        <CookieConsent />
+      </body>
     </html>
   );
 }
